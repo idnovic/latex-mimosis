@@ -1,7 +1,13 @@
-\ProvidesFile{bibliography-correct-ordinals.lbx}
+\ProvidesFile{english-mimosis.lbx}
+\InheritBibliographyExtras{english}
 
-\InheritBibliographyExtras{british}
+% Do not abbreviate "technical report".
+\DeclareBibliographyStrings{%
+  inherit      = {english},
+  techreport   = {{technical report}{technical report}},
+}
 
+% Use superscripts whenever appropriate and possible
 \DeclareBibliographyExtras{%
   \protected\def\mkbibordinal#1{%
     \begingroup%
